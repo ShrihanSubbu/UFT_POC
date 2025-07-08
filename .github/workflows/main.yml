@@ -15,4 +15,4 @@ jobs:
 
       - name: Run UFT One test
         run: |
-          "C:\Program Files (x86)\OpenText\Functional Testing\bin\UFT.exe" -test "C:\Users\XL251307\Desktop\UFT_ONE_POC\UFT_POC\DataEnv" -run
+          "C:\Program Files (x86)\OpenText\Functional Testing\bin\UFT.exe" -run -test "C:\Users\XL251307\Desktop\UFT_ONE_POC\UFT_POC\DataEnv" -silent
