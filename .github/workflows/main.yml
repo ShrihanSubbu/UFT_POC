@@ -6,6 +6,9 @@ on:
 jobs:
   run-uft-tests:
     runs-on: [self-hosted, Windows, X64]
+    defaults:
+      run:
+        shell: cmd
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
