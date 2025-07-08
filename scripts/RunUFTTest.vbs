@@ -8,9 +8,6 @@ qtApp.Visible = True
 qtApp.Open WScript.Arguments.Item(0), False
 Set qtTest = qtApp.Test
 
-Set qtResultsOptions = CreateObject("QuickTest.RunResultsOptions")
-qtResultsOptions.ResultsLocation = WScript.Arguments.Item(1)
-
 qtTest.Run qtResultsOptions
 qtTest.Close
 qtApp.Quit
