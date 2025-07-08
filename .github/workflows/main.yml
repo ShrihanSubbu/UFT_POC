@@ -1,4 +1,4 @@
-name: Run UFT One Tests
+name: Run UFT One Tests via VBScript
 
 on:
   workflow_dispatch:
@@ -6,13 +6,10 @@ on:
 jobs:
   run-uft-tests:
     runs-on: [self-hosted, Windows, X64]
-    defaults:
-      run:
-        shell: cmd
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Run UFT One test
+      - name: Run UFT One test using VBScript
         run: |
-          "C:\Program Files (x86)\OpenText\Functional Testing\bin\UFT.exe" -run -test "C:\Users\XL251307\Desktop\UFT_ONE_POC\UFT_POC\DataEnv" -silent
+          cscript.exe "C:\Users\XL251307\Desktop\UFT_ONE_POC\RunUFTTest_1.vbs"
