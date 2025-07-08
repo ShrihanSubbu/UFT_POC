@@ -1,4 +1,4 @@
-name: Run UFT One Tests via VBScript
+name: Run UFT One Tests via VBScript from repo
 
 on:
   workflow_dispatch:
