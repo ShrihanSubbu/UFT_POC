@@ -15,4 +15,4 @@ jobs:
 
       - name: Run UFT One test using VBScript from repo
         run: |
-          cscript.exe "%GITHUB_WORKSPACE%\scripts\RunUFTTest.vbs" "%GITHUB_WORKSPACE%\DataEnv"
+          cscript.exe "%GITHUB_WORKSPACE%\scripts\RunUFTTest.vbs" "%GITHUB_WORKSPACE%\DataEnv" "%GITHUB_WORKSPACE%\Results"
