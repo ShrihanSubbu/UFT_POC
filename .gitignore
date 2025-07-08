@@ -1,0 +1,30 @@
+# Ignore UFT One test results and temporary files
+Test Results/
+*.log
+*.tmp
+*.bak
+*.err
+*.dat
+*.dmp
+IjoinPRE1/Res*/
+Ijoin_Test1/Res*/
+
+# Ignore compiled binaries and cache
+*.exe
+*.dll
+*.obj
+*.pdb
+*.cache
+
+# Ignore configuration and backup files
+*.cfg
+*.old
+*.swp
+
+# Ignore hidden system files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE metadata
+.vs/
+.idea/
