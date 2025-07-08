@@ -2,18 +2,14 @@ Dim qtApp, qtTest, qtResultsOptions
 
 Set qtApp = CreateObject("QuickTest.Application")
 
-If Not qtApp.Launched Then
-    qtApp.Launch
-End If
-
+If Not qtApp.Launched Then qtApp.Launch
 qtApp.Visible = True
 
 qtApp.Open WScript.Arguments.Item(0), False
 Set qtTest = qtApp.Test
 
-' Set custom results location
 Set qtResultsOptions = CreateObject("QuickTest.RunResultsOptions")
-qtResultsOptions.ResultsLocation = "C:\UFT_Results\DataEnvResults"
+qtResultsOptions.ResultsLocation = WScript.Arguments.Item(1)
 
 qtTest.Run qtResultsOptions
 qtTest.Close
