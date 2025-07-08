@@ -1,0 +1,15 @@
+name: Run UFT One Tests
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-uft-tests:
+    runs-on: [self-hosted, Windows, X64]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Run UFT One test
+        run: |
+          "C:\\Program Files (x86)\\OpenText\\Functional Testing\\bin\\UFT.exe" -test "C:\\Users\\XL251307\\Desktop\\UFT_ONE_POC\\UFT_POC\\DataEnv" -run
