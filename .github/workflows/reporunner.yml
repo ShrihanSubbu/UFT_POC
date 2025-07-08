@@ -1,0 +1,18 @@
+name: Run UFT One Tests via VBScript
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-uft-tests:
+    runs-on: [self-hosted, Windows, X64]
+    defaults:
+      run:
+        shell: cmd
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Run UFT One test using VBScript from repo
+        run: |
+          cscript.exe "%GITHUB_WORKSPACE%\scripts\RunUFTTest.vbs" "%GITHUB_WORKSPACE%\DataEnv"
