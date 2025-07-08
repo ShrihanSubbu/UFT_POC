@@ -1,0 +1,1 @@
+﻿var __testDataSource={items:[{dataFilePath:'Default.xlsx',dataFileFormat:'excel',dataFileFolder:'C:\\Users\\XL251307\\OneDrive - Telekom Malaysia Berhad\\Documents\\Functional Testing\\DataEnv\\Res4',namePairs:[]}]};
