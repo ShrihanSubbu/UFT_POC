@@ -1,4 +1,4 @@
-Dim qtApp, qtTest
+Dim qtApp, qtTest, qtResultsOptions
 
 Set qtApp = CreateObject("QuickTest.Application")
 
@@ -8,12 +8,15 @@ End If
 
 qtApp.Visible = True
 
-' Use relative path from GitHub workspace
 qtApp.Open WScript.Arguments.Item(0), False
 Set qtTest = qtApp.Test
-qtTest.Run
-qtTest.Close
 
+' Set custom results location
+Set qtResultsOptions = CreateObject("QuickTest.RunResultsOptions")
+qtResultsOptions.ResultsLocation = "C:\UFT_Results\DataEnvResults"
+
+qtTest.Run qtResultsOptions
+qtTest.Close
 qtApp.Quit
 
 MsgBox "Test executed successfully."
